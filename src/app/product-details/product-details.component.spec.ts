@@ -12,6 +12,7 @@ describe('ProductDetailsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ProductDetailsComponent], 
+      imports: [HttpClientModule],
       providers: [
         {
           provide: ActivatedRoute,
@@ -27,7 +28,6 @@ describe('ProductDetailsComponent', () => {
           },
         },
       ],
-      imports: [HttpClientModule],
     });
     fixture = TestBed.createComponent(ProductDetailsComponent);
     
