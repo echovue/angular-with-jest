@@ -26,15 +26,16 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit() {
     // First get the product id from the current route.
+    console.log('1 - ' + this.route);
     const routeParams = this.route.snapshot.paramMap;
+    console.log('2 - ' + routeParams.get('productId'));
     const productIdFromRoute = Number(routeParams.get('productId'));
+    console.log('3 - ' + productIdFromRoute);
 
     // Find the product that correspond with the id provided in route.
     this.product = products.find(product => product.id === productIdFromRoute);
   }
 }
-
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
