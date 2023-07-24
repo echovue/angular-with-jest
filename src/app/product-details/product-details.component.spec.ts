@@ -21,9 +21,6 @@ describe('ProductDetailsComponent', () => {
               paramMap: convertToParamMap({
                 productId: '2'
               })
-              // paramMap: {
-              //   get: () => 2,
-              // }
             }
           },
         },
@@ -36,9 +33,14 @@ describe('ProductDetailsComponent', () => {
   });
 
 
-  it('should display the product title', () => {
-     expect(component).toBeTruthy();
+  it('should instantiate the Product Details Component', () => {
+    expect(component).toBeTruthy();
   });
+
+  it('find a valid product', () => {
+    expect(component.product).toBeDefined
+  });
+
 });
 
 
